@@ -85,7 +85,7 @@ public class TpNumero3 {
 		}
 		
 
-		//Punto 1- c)
+		//Punto 2
 	
  
 		String frase = "Yo;tengo; un; elefante que se; llama trompita ... ";
