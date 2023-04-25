@@ -1,6 +1,6 @@
-package MiPrimerPaquete;
+package ;
 
-public class DesuentoTopoPorcentaje extends Descuento {
+public class DesuentoTopePorcentaje extends Descuento {
 
 	public double montoFinal(double montoInicial) {
 		 double tope = montoInicial - (montoInicial * this.dameMonto()/100);
