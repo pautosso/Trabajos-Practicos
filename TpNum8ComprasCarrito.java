@@ -1,4 +1,4 @@
-package TpNum5;
+package ;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -53,27 +53,6 @@ public class ComprasCarrito {
 			
 		}
 	
-		
-		
-		/*item[0].dameTitulo();
-		double monto =mostrarCompras(item,carro1,c1);
-		carro1.mostrarMontoCarrito(monto);
-		
-		//aplicamos el descuento
-	
-		aplicarDescuento (monto);}
-		
-		/*Descuento desc1 = new DescuentoFijo ();
-		desc1.setValorDesc(150);
-		System.out.println("Monto del carrito con descuento fijo: " +desc1.valorFinal(monto));
-	    
-		//descuento porcentaje
-		
-		Descuento desc2 = new DescuentoPor ();
-		desc2.setValorDesc(0.05);
-		System.out.println("Monto del carrito con porcentaje: " +desc2.valorFinal(monto));
-	
-	}*/
 	
 	public static void aplicarDescuento (double monto) {
 		
