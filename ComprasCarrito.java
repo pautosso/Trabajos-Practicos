@@ -85,7 +85,12 @@ public class ComprasCarrito {
 		if (dia%2!=0) {
 			Descuento desc1 = new DescuentoFijo();
 			desc1.setValorDesc(150);
-			System.out.println("Monto del carrito con descuento fijo: " +desc1.valorFinal(monto));
+			double montoF = desc1.valorFinal(monto);
+			if (montoF > 0)
+			System.out.println("Monto del Carrito con Descuento Fijo: "+String.format("%.2f",montoF));
+			else
+				System.out.println("El monto no se puede aplicar");
+			//System.out.println("Monto del carrito con descuento fijo: " +desc1.valorFinal(monto));
 		    
 		}
 		else {
@@ -95,10 +100,39 @@ public class ComprasCarrito {
 			}
 			else
 			desc2.setValorDesc(0.15);
-			System.out.println("Monto del carrito con porcentaje: " +desc2.valorFinal(monto));
+			double montoD =desc2.valorFinal( monto); 
+			if (montoD > 0)
+				System.out.println("Monto del Carrito con Descuento %: "+String.format("%.2f",montoD));
+			else
+				System.out.println("El monto no se puede aplicar");
+			
+				//System.out.println("Monto del carrito con porcentaje: " +desc2.valorFinal(monto));
 		}
 		
 	}
+	public static void mostrarCompras(List listaI, Carrito carro1, Cliente c1) {
+		
+		Iterator<ItemCarrito> itI = listaI.iterator();
+		boolean titulo=true;
+		double monto=0;
+		
+		while (	itI.hasNext()) {
+			ItemCarrito datos = itI.next();
+			if (titulo) {
+				datos.dameTitulo();
+				titulo=false;
+			}
+			datos.mostrarItem();	
+			monto = monto + datos.dameMontoItem();
+			}
+		carro1.dameMontoTotal();
+		carro1.mostrarMontoCarrito(monto);
+		if (monto > 0 ) 
+		aplicarDescuento(monto);
+		else
+			System.out.println("El monto del carro no permite descuentos");				
+		}
+	
 	    public static double mostrarCompras(ItemCarrito item[], Carrito carro1, Cliente c1) {
 		double suma = 0;
 		for (ItemCarrito itemC : item) {
