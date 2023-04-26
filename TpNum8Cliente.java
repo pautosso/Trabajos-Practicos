@@ -1,4 +1,4 @@
-package TpNum5;
+package ;
 
 public class Cliente {
 	private int codigo;
