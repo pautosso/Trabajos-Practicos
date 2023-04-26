@@ -1,5 +1,4 @@
-package TpNum5
-;
+package ;
 
 public class Carrito {
 private int numero;  //carro1.damenumero() para acceder ya que esta encapsulado con private
