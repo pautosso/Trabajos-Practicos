@@ -1,4 +1,4 @@
-package TpNum5;
+package ;
 
 public class Producto {
 	private int codigo;
