@@ -1,4 +1,4 @@
-package TpNum5;
+package ;
 
 public class DescuentoPor extends Descuento{
 	public double valorFinal (double valorInicial) {
